@@ -4,9 +4,15 @@ public class Data {
 	
 	 private String name;
 
-	    private String y;
+	    private int y;
 
-	    public String getName ()
+	    public Data(String name, int y) {
+			super();
+			this.name = name;
+			this.y = y;
+		}
+
+		public String getName ()
 	    {
 	        return name;
 	    }
@@ -16,12 +22,12 @@ public class Data {
 	        this.name = name;
 	    }
 
-	    public String getY ()
+	    public int getY ()
 	    {
 	        return y;
 	    }
 
-	    public void setY (String y)
+	    public void setY (int y)
 	    {
 	        this.y = y;
 	    }

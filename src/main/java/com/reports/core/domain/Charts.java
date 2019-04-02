@@ -1,16 +1,18 @@
 package com.reports.core.domain;
 
+import java.util.List;
+
 public class Charts {
 	
 	 private String innerSize;
 
-	    private String startAngle;
+	    private int startAngle;
 
-	    private Data[] data;
+	    private List<Data> data;
 
 	    private String videoURL;
 
-	    private String endAngle;
+	    private int endAngle;
 
 	    private String name;
 
@@ -18,9 +20,24 @@ public class Charts {
 
 	    private String graph;
 
-	    private String marginLeft;
+	    private int marginLeft;
 
-	    public String getInnerSize ()
+	    
+	    public Charts(String innerSize, int startAngle, List<Data> data, String videoURL, int endAngle, String name,
+				String title, String graph, int marginLeft) {
+			super();
+			this.innerSize = innerSize;
+			this.startAngle = startAngle;
+			this.data = data;
+			this.videoURL = videoURL;
+			this.endAngle = endAngle;
+			this.name = name;
+			this.title = title;
+			this.graph = graph;
+			this.marginLeft = marginLeft;
+		}
+
+		public String getInnerSize ()
 	    {
 	        return innerSize;
 	    }
@@ -30,22 +47,22 @@ public class Charts {
 	        this.innerSize = innerSize;
 	    }
 
-	    public String getStartAngle ()
+	    public int getStartAngle ()
 	    {
 	        return startAngle;
 	    }
 
-	    public void setStartAngle (String startAngle)
+	    public void setStartAngle (int startAngle)
 	    {
 	        this.startAngle = startAngle;
 	    }
 
-	    public Data[] getData ()
+	    public List<Data> getData ()
 	    {
 	        return data;
 	    }
 
-	    public void setData (Data[] data)
+	    public void setData (List<Data> data)
 	    {
 	        this.data = data;
 	    }
@@ -60,12 +77,12 @@ public class Charts {
 	        this.videoURL = videoURL;
 	    }
 
-	    public String getEndAngle ()
+	    public int getEndAngle ()
 	    {
 	        return endAngle;
 	    }
 
-	    public void setEndAngle (String endAngle)
+	    public void setEndAngle (int endAngle)
 	    {
 	        this.endAngle = endAngle;
 	    }
@@ -100,12 +117,12 @@ public class Charts {
 	        this.graph = graph;
 	    }
 
-	    public String getMarginLeft ()
+	    public int getMarginLeft ()
 	    {
 	        return marginLeft;
 	    }
 
-	    public void setMarginLeft (String marginLeft)
+	    public void setMarginLeft (int marginLeft)
 	    {
 	        this.marginLeft = marginLeft;
 	    }
