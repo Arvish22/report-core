@@ -12,8 +12,8 @@ import com.reports.core.service.ChartService;
 @RestController
 public class ChartController {
 	
-	@Autowired
-	ChartService chartService;
+//	@Autowired
+//	ChartService chartService;
 
 	@RequestMapping(value = "/api/charts", method = RequestMethod.GET)
 	public ResponseEntity<String> getCharts(){
