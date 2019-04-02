@@ -1,4 +1,4 @@
-package com.reports.Core;
+package com.reports.core;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

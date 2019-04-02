@@ -1,4 +1,4 @@
-package com.reports.Core;
+package com.reports.core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
