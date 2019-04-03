@@ -15,16 +15,16 @@ import com.reports.core.service.ChartService;
 @RestController
 @RequestMapping("api/v1")
 public class ChartController {
-	
-//	@Autowired
-//	ChartService chartService;
+
+	@Autowired 
+	ChartService chartService;
 
 	@RequestMapping(value = "/charts", method = RequestMethod.GET)
 	public ResponseEntity<List<Charts>> getCharts(){
-		
+
 		List<Charts> chartList = chartService.getCharts();
-		
-		 return ResponseEntity.ok().
-				  contentType(MediaType.APPLICATION_JSON).body(chartList);
+
+		return ResponseEntity.ok().
+				contentType(MediaType.APPLICATION_JSON).body(chartList);
 	}
 }
