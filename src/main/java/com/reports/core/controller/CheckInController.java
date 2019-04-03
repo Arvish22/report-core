@@ -20,19 +20,19 @@ import com.reports.core.service.CheckInService;
 @RequestMapping("api/v1")
 @CrossOrigin("*")
 public class CheckInController {
-		@Autowired(required=true)
-		CheckInService checkInService;
-	  
-	@RequestMapping(value = "/careerselector", method = RequestMethod.GET)
+	
+	@Autowired(required=true)
+	CheckInService checkInService;
+
+	@RequestMapping(value = "/careerselector", method = RequestMethod.POST)
 	public ResponseEntity<List<Career>> careerSelector(@RequestBody String institution) {
-		List<Career> d = checkInService.careerSelector(institution);
-		return ResponseEntity.ok().body(d);
+		List<Career> careerList = checkInService.careerSelector(institution);
+		return ResponseEntity.ok().body(careerList);
 	}
-	
-	@RequestMapping(value = "/careerjobs", method = RequestMethod.GET)
+
+	@RequestMapping(value = "/careerjobs", method = RequestMethod.POST)
 	public ResponseEntity<List<CheckBox>> careerJobs(@RequestBody String jobName) {
-		List<CheckBox> d = checkInService.careerJobs(jobName);
-		return ResponseEntity.ok().body(d);
+		List<CheckBox>  checkBoxList = checkInService.careerJobs(jobName);
+		return ResponseEntity.ok().body(checkBoxList);
 	}
-	
 }
