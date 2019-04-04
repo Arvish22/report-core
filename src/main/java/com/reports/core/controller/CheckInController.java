@@ -18,7 +18,7 @@ import com.reports.core.service.CheckInService;
 
 @RestController
 @RequestMapping("api/v1")
-@CrossOrigin("*")
+@CrossOrigin(origins = "*")
 public class CheckInController {
 	
 	@Autowired(required=true)

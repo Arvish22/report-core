@@ -130,6 +130,6 @@ public class Charts {
 	    @Override
 	    public String toString()
 	    {
-	        return "[innerSize = "+innerSize+", startAngle = "+startAngle+", data = "+data+", videoURL = "+videoURL+", endAngle = "+endAngle+", name = "+name+", title = "+title+", graph = "+graph+", marginLeft = "+marginLeft+"]";
+	        return "chart [innerSize = "+innerSize+", startAngle = "+startAngle+", data = "+data+", videoURL = "+videoURL+", endAngle = "+endAngle+", name = "+name+", title = "+title+", graph = "+graph+", marginLeft = "+marginLeft+"]";
 	    }
 }
