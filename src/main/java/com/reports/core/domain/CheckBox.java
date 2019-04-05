@@ -13,25 +13,25 @@ public class CheckBox {
 
 	private String buildingUrl;
 
-	private JobsData jobData;
+	private List<JobsData> jobList;
 
 	public CheckBox(String career, String videoURL, String name, String searchUrl, String buildingUrl,
-			JobsData jobData) {
+			List<JobsData> jobList) {
 		super();
 		this.career = career;
 		this.videoURL = videoURL;
 		this.name = name;
 		this.searchUrl = searchUrl;
 		this.buildingUrl = buildingUrl;
-		this.jobData = jobData;
+		this.jobList = jobList;
 	}
 
-	public JobsData getJobList() {
-		return jobData;
+	public List<JobsData> getJobList() {
+		return jobList;
 	}
 
-	public void setJobList(JobsData jobData) {
-		this.jobData = jobData;
+	public void setJobList(List<JobsData> jobData) {
+		this.jobList = jobData;
 	}
 
 	public String getCareer ()

@@ -14,39 +14,31 @@ public class CheckInDaoImpl implements CheckInDao {
 
 	@Override
 	public List<Career> careerSelector(String institution) {
-	
-		Career career=new Career();
-		Career career1=new Career();
-		Career career2=new Career();
 
-		List<Career> lc=new ArrayList<Career>();
+		List<Career> careerList=new ArrayList<Career>();
 		
-		career.setId("1");
-		career.setName("Agriculture");
+		careerList.add(new Career("https://www.youtube.com/embed/zdCiaXPE8JQ", "Mr.APJ", "1", "Agriculture"));
+		careerList.add(new Career("https://www.youtube.com/embed/mpfxsvBPWEs", "Mr.SUNDAR", "2", "Information Technologies"));
+		careerList.add(new Career("https://www.youtube.com/embed/BxY_eJLBflk", "Mr.DENZEL", "3", "Construction"));
 		
-		career1.setId("2");
-		career1.setName("Information Technologies");
-		
-		career2.setId("3");
-		career2.setName("Construction");
-		
-		lc.add(career);
-		lc.add(career1);
-		lc.add(career2);
-		
-		return lc;
+		return careerList;
 	}
 	
 	@Override
 	public List<CheckBox> careerJobs(String jobName){
 		
 		List<CheckBox> checkBoxList = new ArrayList<CheckBox>();
+		List<JobsData> jobsDataList = new ArrayList<JobsData>();
 		
-		JobsData jobsData = new JobsData("JAVA", "BSC", "task1", "Java Tech", "post grad, IT job");
+		jobsDataList.add(new JobsData("skill", "JAVA"));
+		jobsDataList.add(new JobsData("Technologies", "JAVA tech"));
+		jobsDataList.add(new JobsData("Education", "BSC"));
+		jobsDataList.add(new JobsData("Tasks", "Task-1"));
+		jobsDataList.add(new JobsData("Opportunities", "go home"));
 		
-		CheckBox checkBox  = new CheckBox("Mashroom-1", "https://www.youtube.com/embed/zdCiaXPE8JQ", "Mr.APJ", "google.com", "google.com", jobsData);
-		CheckBox checkBox_1 = new CheckBox("Mashroom-1", "https://www.youtube.com/embed/zdCiaXPE8JQ", "Mr.APJ", "google.com", "google.com", jobsData);
-		CheckBox checkBox_2 = new CheckBox("Mashroom-1", "https://www.youtube.com/embed/zdCiaXPE8JQ", "Mr.APJ", "google.com", "google.com", jobsData);
+		CheckBox checkBox  = new CheckBox("Mashroom-1", "https://www.youtube.com/embed/zdCiaXPE8JQ", "Mr.APJ", "google.com", "google.com", jobsDataList);
+		CheckBox checkBox_1 = new CheckBox("Mashroom-1", "https://www.youtube.com/embed/zdCiaXPE8JQ", "Mr.APJ", "google.com", "google.com", jobsDataList);
+		CheckBox checkBox_2 = new CheckBox("Mashroom-1", "https://www.youtube.com/embed/zdCiaXPE8JQ", "Mr.APJ", "google.com", "google.com", jobsDataList);
 		
 		checkBoxList.add(checkBox);
 		checkBoxList.add(checkBox_1);

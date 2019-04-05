@@ -2,49 +2,28 @@ package com.reports.core.domain;
 
 public class JobsData {
 	
-	private String skills;
-	private String education;
-	private String tasks;
-	private String technologies;
-	private String opportunities;
+	private String tittle;
+	private String value;
 	
-	public JobsData(String skills, String education, String tasks, String technologies, String opportunities) {
+	public JobsData(String tittle, String value) {
 		super();
-		this.skills = skills;
-		this.education = education;
-		this.tasks = tasks;
-		this.technologies = technologies;
-		this.opportunities = opportunities;
+		this.tittle = tittle;
+		this.value = value;
 	}
-	
-	public String getSkills() {
-		return skills;
+
+	public String getTittle() {
+		return tittle;
 	}
-	public void setSkills(String skills) {
-		this.skills = skills;
+
+	public void setTittle(String tittle) {
+		this.tittle = tittle;
 	}
-	public String getEducation() {
-		return education;
+
+	public String getValue() {
+		return value;
 	}
-	public void setEducation(String education) {
-		this.education = education;
-	}
-	public String getTasks() {
-		return tasks;
-	}
-	public void setTasks(String tasks) {
-		this.tasks = tasks;
-	}
-	public String getTechnologies() {
-		return technologies;
-	}
-	public void setTechnologies(String technologies) {
-		this.technologies = technologies;
-	}
-	public String getOpportunities() {
-		return opportunities;
-	}
-	public void setOpportunities(String opportunities) {
-		this.opportunities = opportunities;
+
+	public void setValue(String value) {
+		this.value = value;
 	}
 }
