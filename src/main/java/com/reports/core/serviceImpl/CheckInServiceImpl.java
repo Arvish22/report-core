@@ -25,10 +25,9 @@ CheckInDao checkInDao;
 	@Override
 	public List<CheckBox> careerJobs(String jobName){
 		
-		List<CheckBox> cb=checkInDao.careerJobs(jobName);
+		List<CheckBox> checkBoxList =checkInDao.careerJobs(jobName);
 		
-		
-		return cb;
+		return checkBoxList;
 	}
 	
 }

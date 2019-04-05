@@ -24,7 +24,6 @@ public class ChartController {
 
 	@RequestMapping(value = "/charts", method = RequestMethod.GET)
 	public ResponseEntity<List<Charts>> getCharts(){
-		
 		List<Charts> chartList = chartService.getCharts();
 		ChartsArr ca = new ChartsArr(chartList);
 		return ResponseEntity.ok().

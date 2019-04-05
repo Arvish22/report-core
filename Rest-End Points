@@ -1,9 +1,0 @@
-Rest End Points For Report-UI
----------------------------------------------
-
-1.  /api/v1/careerjobs		   {post call}
-
-2.  /api/v1/careerselector      {post call}
-
-3.  /api/v1/charts              {get call}
-

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.reports.core.dao.CheckInDao;
 import com.reports.core.domain.Career;
 import com.reports.core.domain.CheckBox;
+import com.reports.core.domain.JobsData;
 @Repository
 public class CheckInDaoImpl implements CheckInDao {
 
@@ -35,19 +36,23 @@ public class CheckInDaoImpl implements CheckInDao {
 		
 		return lc;
 	}
+	
 	@Override
 	public List<CheckBox> careerJobs(String jobName){
 		
-		List<CheckBox> cb=new ArrayList<CheckBox>();
-		CheckBox c=new CheckBox();
-		c.setName("Mr.APJ");
-		c.setBuildingUrl("google.com");
-		c.setCareer("Mashroom-1");
-		c.setSearchUrl("google.com");
-		c.setVideoURL("https://www.youtube.com/embed/zdCiaXPE8JQ");
-		cb.add(c);
+		List<CheckBox> checkBoxList = new ArrayList<CheckBox>();
 		
-		return cb;
+		JobsData jobsData = new JobsData("JAVA", "BSC", "task1", "Java Tech", "post grad, IT job");
+		
+		CheckBox checkBox  = new CheckBox("Mashroom-1", "https://www.youtube.com/embed/zdCiaXPE8JQ", "Mr.APJ", "google.com", "google.com", jobsData);
+		CheckBox checkBox_1 = new CheckBox("Mashroom-1", "https://www.youtube.com/embed/zdCiaXPE8JQ", "Mr.APJ", "google.com", "google.com", jobsData);
+		CheckBox checkBox_2 = new CheckBox("Mashroom-1", "https://www.youtube.com/embed/zdCiaXPE8JQ", "Mr.APJ", "google.com", "google.com", jobsData);
+		
+		checkBoxList.add(checkBox);
+		checkBoxList.add(checkBox_1);
+		checkBoxList.add(checkBox_2);
+		
+		return checkBoxList;
 	}
 
 }
